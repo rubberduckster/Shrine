@@ -1,0 +1,49 @@
+#YinYang {
+    height: 250px;
+
+    filter: opacity(50%);
+}
+
+#Flame {
+    height: 250px;
+
+    left: 905px;
+    top: 5px;
+
+    position: absolute;
+    z-index: 1;
+
+    filter: opacity(0%);
+}
+
+#Flame:hover {
+    transition: filter 0.8s ease;
+    filter: opacity(100%);
+    filter: drop-shadow(0 0 4px orange);
+
+    transform: scale(1.5) rotate(1turn);
+    transition: transform 0.8s ease;
+
+    animation: rotateflame 3s linear infinite;
+}
+
+.flameYang {
+    margin: auto;
+}
+
+.flameYang:hover img {
+    transform: scale(1.2) rotate(1turn);
+    transition: transform 0.8s ease;
+
+    filter: opacity(100%);
+
+    animation: rotateyang 2s linear infinite;
+}
+
+@keyframes rotateyang {
+    to {rotate: 1turn}
+}
+
+@keyframes rotateflame {
+    to {rotate: 1turn}
+}
