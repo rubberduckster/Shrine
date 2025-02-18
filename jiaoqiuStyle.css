@@ -1,3 +1,29 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.menuBar {
+    background: linear-gradient(to right,rgb(24, 0, 0), rgb(77, 0, 0), rgb(131, 22, 14), #a74d34); 
+
+    height: 80px;
+    width: 100%;
+
+    overflow: hidden;
+}
+
+#BarFlame {
+    filter: saturate(120%);
+
+    height: 120%;
+    transform: scale(2, 1);
+
+    margin-left: 90%;
+
+    object-fit: contain;
+}
+
 #YinYang {
     height: 250px;
 
@@ -8,7 +34,7 @@
     height: 250px;
 
     left: 905px;
-    top: 5px;
+    top: 85px;
 
     position: absolute;
     z-index: 1;
