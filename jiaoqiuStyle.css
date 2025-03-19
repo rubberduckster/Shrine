@@ -4,6 +4,10 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 :root {
     --darkred: #270909;
     --red: #951615;
@@ -22,19 +26,27 @@ body {
     top: 0;
     left: 0;
     position: absolute;
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
 }
 
 .custom-cursor img {
     max-width: 100%;
     max-height: 100%;
-    transition: all 0.5s ease-in-out;
 }
 
 .custom-cursor.active {
-    transform: scale(1.5, 1.5);
+    width: 57px;
+    height: 57px;
 }
+
+body:has(a:hover) #FlameCursor {
+    filter: drop-shadow(2px 0 0 #f35831) 
+        drop-shadow(0 2px 0 #f35831)
+        drop-shadow(-2px 0 0 #f35831) 
+        drop-shadow(0 -2px 0 #f35831);
+  }
 
 .menuBar {
     background: linear-gradient(to right,#270909, #951615, #BB5A34);
@@ -67,7 +79,7 @@ body {
     text-align: center;
 
     color: #e9e2dd;
-    border: solid 2px rgb(95, 33, 18);
+    border: solid 2px #5f2112;
     border-radius: 3px 3px;
     padding: 5px 5px;
 
@@ -78,6 +90,11 @@ body {
     width: 90px;
 
     position: absolute;
+}
+
+.profileButton:hover{
+    border: solid 2px #9e422b;
+    background-color: #195779;
 }
 
 .officialButton {
@@ -99,6 +116,11 @@ body {
     position: absolute;
 }
 
+.officialButton:hover{
+    border: solid 2px #ac4830;
+    background-color: #195779;
+}
+
 .fanButton {
     font-family: monospace;
     font-size: 20px;
@@ -118,6 +140,11 @@ body {
     position: absolute;
 }
 
+.fanButton:hover{
+    border: solid 2px #bd5237;
+    background-color: #195779;
+}
+
 #BarFlame {
     filter: saturate(120%);
 
@@ -133,15 +160,15 @@ body {
     height: 250px;
     width: 250px;
 
-    padding-left: 80px;
-    padding-top: 80px;
+    padding-left: 60px;
+    padding-top: 60px;
 
     z-index: 2;
 }
 
 .imageContainer .frame {
-    height: 250px;
-    width: 250px;
+    height: 270px;
+    width: 270px;
     background-color: #270909;
     border-radius: 3px;
     position: relative;
@@ -153,8 +180,8 @@ body {
     --anime:0deg;
     content: "";
     position: absolute;
-    width: calc(100% + 8px);
-    height: calc(100% + 8px);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
     top: 50%;
     left: 50%;
     box-sizing: border-box;
@@ -165,7 +192,13 @@ body {
 }
 
 .imageContainer .frame::before {
-    transition: 0.6s;
+    transition: 0.1s;
+}
+
+#JiaoqiuPortrait {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 @property --anime {
