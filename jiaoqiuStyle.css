@@ -25,7 +25,6 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    position: absolute;
     width: 50px;
     height: 50px;
     pointer-events: none;
@@ -146,14 +145,21 @@ body:has(a:hover) #FlameCursor {
 }
 
 #BarFlame {
-    filter: saturate(120%);
+    filter:hue-rotate(-12deg);
 
-    height: 120%;
-    transform: scale(2, 1);
+    height: 100%;
+    transform: scale(1.1, 1);
 
-    margin-left: 90%;
+    margin-left: 75%;
     
     object-fit: contain;
+}
+
+.slide-right-box {
+    position: absolute;
+
+    animation: slide-right 2s ease-out;
+    animation-fill-mode: forwards;
 }
 
 .imageContainer {
@@ -214,4 +220,35 @@ body:has(a:hover) #FlameCursor {
     100% {
         --anime: 360deg;
     }
+}
+
+p a{
+    color: #9B504C;
+}
+
+.paragraph1 {
+    width:100%;
+    overflow:hidden;
+    position: absolute;
+    top: 35%;
+    padding-left: 360px;
+}
+
+.paragraph1 p {
+    font-family: monospace;
+    font-size: 15px;
+
+    color: white;
+}
+
+@keyframes slide-right {
+    from {
+    margin-left: -72%;
+    width: 300%;
+}
+
+    to {
+    margin-left: 0%;
+    width: 100%;
+}
 }
