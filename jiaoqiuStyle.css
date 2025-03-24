@@ -150,7 +150,7 @@ body:has(a:hover) #FlameCursor {
     height: 100%;
     transform: scale(1.1, 1);
 
-    margin-left: 75%;
+    margin-left: 82%;
     
     object-fit: contain;
 }
@@ -172,7 +172,26 @@ body:has(a:hover) #FlameCursor {
     z-index: 2;
 }
 
+.imageContainer2 {
+    height: 250px;
+    width: 250px;
+
+    padding-left: 1600px;
+    padding-top: 530px;
+
+    z-index: 2;
+}
+
 .imageContainer .frame {
+    height: 270px;
+    width: 270px;
+    background-color: #270909;
+    border-radius: 3px;
+    position: relative;
+    transition: 0.4s;
+}
+
+.imageContainer2 .frame2 {
     height: 270px;
     width: 270px;
     background-color: #270909;
@@ -197,11 +216,37 @@ body:has(a:hover) #FlameCursor {
     z-index: -1;
 }
 
+.imageContainer2 .frame2::before,
+.imageContainer2 .frame2::after {
+    --anime:0deg;
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    background-image: conic-gradient(from var(--anime), var(--red), var(--orange), var(--pink), var(--red));
+    animation: animate 5s linear infinite;
+    z-index: -1;
+}
+
 .imageContainer .frame::before {
     transition: 0.1s;
 }
 
+.imageContainer2 .frame2::before {
+    transition: 0.1s;
+}
+
 #JiaoqiuPortrait {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#JiaoqiuPortrait2 {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -234,9 +279,26 @@ p a{
     padding-left: 360px;
 }
 
+.paragraph2 {
+    width:100%;
+    overflow:hidden;
+    position: absolute;
+    top: 62%;
+    left: -19%;
+}
+
 .paragraph1 p {
     font-family: monospace;
     font-size: 15px;
+
+    color: white;
+}
+
+.paragraph2 p {
+    font-family: monospace;
+    font-size: 15px;
+
+    text-align: right;
 
     color: white;
 }
