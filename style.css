@@ -1,3 +1,11 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .mainMenu {
     color: whitesmoke;
     text-align: center;
@@ -5,4 +13,26 @@
 
 .mainMenu a {
     color: aqua;
+}
+
+.shrines {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#jiaoqiuShrine {
+    position: absolute;
+    left: 38.3%;
+    top: 0.2%;
+    height: 42%;
+    width: 23.5%;
+}
+
+#jiaoqiuShrine:hover {
+    left: 38%;
+    top: 0%;
+    height: 43%;
+    width: 24.5%;
+    filter: drop-shadow(0 0 0.75rem crimson);
 }
