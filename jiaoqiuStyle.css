@@ -22,7 +22,7 @@ a {
 }
 
 .custom-cursor {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 50px;
@@ -182,6 +182,14 @@ body:has(a:hover) #FlameCursor {
     z-index: 2;
 }
 
+.imageContainer3 {
+    height: 250px;
+    width: 250px;
+
+    padding-left: 60px;
+    padding-top: 10%;
+}
+
 .imageContainer .frame {
     height: 270px;
     width: 270px;
@@ -192,6 +200,15 @@ body:has(a:hover) #FlameCursor {
 }
 
 .imageContainer2 .frame2 {
+    height: 270px;
+    width: 270px;
+    background-color: #270909;
+    border-radius: 3px;
+    position: relative;
+    transition: 0.4s;
+}
+
+.imageContainer3 .frame3 {
     height: 270px;
     width: 270px;
     background-color: #270909;
